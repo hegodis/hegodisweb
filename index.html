@@ -1,0 +1,23 @@
+<html>
+<head>
+  <link rel="icon" href="/storage/emulated/0/Pictures/Screenshot/Screenshot_20250622-005003.jpg" type="image/png">
+</head>
+<body>
+  ...
+  <script>
+    const favicon = document.querySelector('link[rel="icon"]');
+    let imagenActual = 1;
+    const totalImagenes = 10; //  Número total de imágenes de la animación
+    const intervalo = 250; //  Intervalo en milisegundos entre cambios
+
+    function cambiarFavicon() {
+      imagenActual = (imagenActual % totalImagenes) + 1; // Avanza a la siguiente imagen
+      favicon.href = `imagen${imagenActual}.png`; // Actualiza el enlace del favicon
+    }
+
+    window.onload = function() {
+      setInterval(cambiarFavicon, intervalo); // Inicia la animación al cargar la página
+    };
+  </script>
+</body>
+</html>

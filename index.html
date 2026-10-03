@@ -429,8 +429,24 @@
     <!-- Cierre de body y html está correcto -->
     <script>
 
-       // Detección por idioma del navegador
-       if (navigator.language.startsWith('pt')) {
+       // Detección por idiomas del navegador
+  // 1. Inglés ('en')
+if (navigator.language.startsWith('en')) {
+    traducirAlIngles();
+}
+
+// 2. Chino ('zh') - Incluye Mandarín y Cantonés
+else if (navigator.language.startsWith('zh')) {
+    traducirAlChino();
+}
+
+// 3. Árabe ('ar')
+else if (navigator.language.startsWith('ar')) {
+    traducirAlArabe();
+}
+
+// 4. Portugués ('pt')
+else if (navigator.language.startsWith('pt')) {
     traducirAPortugues();
 }
 

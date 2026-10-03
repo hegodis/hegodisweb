@@ -428,11 +428,11 @@
     </div>
     <!-- Cierre de body y html está correcto -->
     <script>
-       
-        // Obtiene el idioma del navegador (ej. "es-ES", "en-US" o "es")
-        const userLang = navigator.language || navigator.userLanguage; 
-        // Inicializa los íconos de Lucide
-        lucide.createIcons();
+
+       // Detección por idioma del navegador
+       if (navigator.language.startsWith('pt')) {
+    traducirAPortugues();
+}
 
         // 1. Lógica del Intersection Observer para animaciones de scroll
         document.addEventListener("DOMContentLoaded", () => {
